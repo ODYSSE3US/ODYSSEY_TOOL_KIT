@@ -1,0 +1,65 @@
+
+.................DIRECTORY_VARIABLES.......................
+
+VARIABLES..............................WINDOWS 10
+
+%SystemDrive%                C:
+%HOMEDRIVE%                  C:\
+%WINDIR%                     C:\Windows
+
+%SystemRoot%                 C:\Windows
+%PATH%                       C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem
+%PSModulePath%               C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+%DriverData%                 C:\Windows\System32\Drivers\DriverData
+
+
+%PUBLIC%                     C:\Users\Public
+%HOMEPATH%                   C:\Users\{username}
+%USERPROFILE%                C:\Users\{username}
+%LOCALAPPDATA%               C:\Users\{username}\AppData\Local
+%APPDATA%                  . C:\Users\{username}\AppData\Roaming
+%TEMP%                       C:\Users\{username}\AppData\Local\Temp
+%TMP%                        C:\Users\{username}\AppData\Local\Temp
+%OneDrive%                   C:\Users\{username}\OneDrive
+
+%PROGRAMFILES%               C:\Program Files
+%ProgramW6432%               C:\Program Files
+%COMMONPROGRAMFILES%       . C:\Program Files\Common Files
+%CommonProgramW6432%         C:\Program Files\Common Files
+
+%PROGRAMFILES(X86)%          C:\Program Files (x86)
+%COMMONPROGRAMFILES(x86)%  . C:\Program Files (x86)\Common Files
+
+%PROGRAMDATA%                C:\ProgramData
+%ALLUSERSPROFILE%          . C:\ProgramData
+
+
+%COMSPEC%                    C:\Windows\System32\cmd.exe
+.................SCRIPTING_VARIABLES...................
+
+%USERNAME%                   {username}
+%DATE%                       Outputs current date. (Command Prompt.)
+%TIME%                       Outputs time. (Command Prompt.)
+%CD%                         Outputs current directory path. (Command Prompt.)
+%PathExt%                    .com;.exe;.bat;.cmd;.vbs;.vbe;.js;.jse;.wsf;.wsh;.msc
+%RANDOM%                     Outputs random number from 0 through 32767.
+%PROMPT%                     $P$G
+%OS%                         Windows_NT
+
+
+%CMDCMDLINE%                 Outputs command line used to launch current Command Prompt session. (Command Prompt.)
+%CMDEXTVERSION%              Outputs the number of current command processor extensions. (Command Prompt.)
+%COMPUTERNAME%               Outputs the system name.
+%ERRORLEVEL%                 Outputs the number of defining exit status of previous command. (Command Prompt.)
+%PROCESSOR_IDENTIFIER%       Outputs processor identifier.
+%PROCESSOR_LEVEL%            Outputs processor level.
+%PROCESSOR_REVISION%         Outputs processor revision.
+%NUMBER_OF_PROCESSORS%       Outputs the number of physical and virtual cores.
+.................SERVER_VARIABLES.......................
+
+%LOGONSERVER%                \\{domain_logon_server}
+%USERDOMAIN%                 Userdomain associated with current user.
+%USERDOMAIN_ROAMINGPROFILE%  Userdomain associated with roaming profile.
+
+
+
