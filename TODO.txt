@@ -1,0 +1,3 @@
+finish the menus 
+have all the main script interact with all the subdirectories and files
+have the main script find new scripts in subdirectories and be able to run them without user interaction (drag and drop)

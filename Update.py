@@ -1,13 +1,11 @@
 import colorama
 import requests
+import __init__
 from colorama import Fore, Back, Style
 
 
 
 colorama.init(autoreset=True)
-
-__Appname__ = "ODYS TOOL KIT"
-__Version__ = "0.100"
 
 
 def check_updates():

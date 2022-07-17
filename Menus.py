@@ -1,5 +1,6 @@
 import colorama
 import lolpython
+import os
 import __init__
 from colorama import Fore, Back, Style
 from  lolpython import lol_py as lolpy
@@ -188,3 +189,64 @@ _____________________________________
         print(Fore.RED + Style.BRIGHT +"Command Not Reccognised...")
         sleep(1)
         dev_Menu()
+
+
+
+
+def Cyber_Security_Menu():
+
+    header_Cyber_Security = f"""{Fore.GREEN}
+   _______     ______  ______ _____        _____ ______ _____ _    _ _____  _____ _________     __
+  / ____\ \   / |  _ \|  ____|  __ \      / ____|  ____/ ____| |  | |  __ \|_   _|__   __\ \   / /
+ | |     \ \_/ /| |_) | |__  | |__) _____| (___ | |__ | |    | |  | | |__) | | |    | |   \ \_/ / 
+ | |      \   / |  _ <|  __| |  _  |______\___ \|  __|| |    | |  | |  _  /  | |    | |    \   /  
+ | |____   | |  | |_) | |____| | \ \      ____) | |___| |____| |__| | | \ \ _| |_   | |     | |   
+  \_____|  |_|  |____/|______|_|  \_\    |_____/|______\_____|\____/|_|  \_|_____|  |_|     |_|   
+                           __  __ ______ _   _ _    _                                             
+                          |  \/  |  ____| \ | | |  | |                                            
+                          | \  / | |__  |  \| | |  | |                                            
+                          | |\/| |  __| | . ` | |  | |                                            
+                          | |  | | |____| |\  | |__| |                                            
+                          |_|  |_|______|_| \_|\____/                                             
+{Fore.YELLOW}___________________________________________________________________________________________________
+{Fore.GREEN}{Fore.YELLOW}
+|1|--{Fore.RED}RED TEAM
+|2|--{Fore.BLUE}BLUE TEAM
+|3|--{Fore.GREY}MISC
+{Fore.CYAN}|01|--MAIN MENU
+{Fore.RED}|00|--Exit {Fore.RESET}
+"""
+    print(header_Cyber_Security)
+    choice = input(Fore.WHITE + Style.BRIGHT + "/CYBER-SECURITY MENU:> ")
+    os.system('cls' if os.name == 'nt' else 'clear')
+    if choice == "1":
+        pass
+    elif choice == "2":
+        pass
+    elif choice == "3":
+        pass
+    elif choice == "01":
+        main_Menu()
+    elif choice == "00":
+        clearScr(), sys.exit()
+    elif choice == "":
+        print(Fore.RED + Style.BRIGHT +"Invalid Command...")
+        sleep(1)
+        dev_Menu()
+    else:
+        print(Fore.RED + Style.BRIGHT +"Command Not Reccognised...")
+        sleep(1)
+        Cyber_Security_Menu()
+
+
+def RED_TEAM_Menu():
+    pass
+
+
+
+def BLUE_TEAM_Menu():
+    pass
+
+#END OF SCRIPT
+if __name__ == '__main__':
+    main_Menu()
