@@ -1,7 +1,11 @@
 import colorama
 import lolpython
 import os
-import __init__
+import cybersec
+import time
+
+from time import sleep
+from cybersec.passwords_and_hashes import *
 from colorama import Fore, Back, Style
 from  lolpython import lol_py as lolpy
 from __init__ import *
@@ -19,7 +23,14 @@ Splash_ody = f"""
    ╚═════╝ ╚═════╝    ╚═╝   ╚══════╝╚══════╝╚══════╝ ╚═════╝ ╚══════╝
 """
 
-
+FR = Fore.RED
+FY = Fore.YELLOW
+FG = Fore.GREEN
+FB = Fore.BLUE
+FC = Fore.CYAN
+FW = Style.BRIGHT + Fore.WHITE
+FGREY = Style.DIM + Fore.WHITE
+FRESET = Style.RESET_ALL + Fore.RESET + Back.RESET
 
 def main_Menu():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -38,12 +49,11 @@ def main_Menu():
  | |  | | |____| |\  | |__| | 
  |_|  |_|______|_| \_|\____/  
 _______________________________
-{Fore.GREEN}Logged In As {Fore.RED} 
 {Fore.GREEN}Choose An Option From The List{Fore.YELLOW}
 |1|--Linux Menu
 |2|--Null
 |3|--Null
-|4|--Null
+|4|--Cyber Security
 |5|--Null
 {Fore.CYAN}|02|--Dev Menu
 {Fore.BLUE}|01|--Check Update
@@ -59,7 +69,7 @@ _______________________________
     elif choice == "3":
         pass
     elif choice == "4":
-        pass
+        Cyber_Security_Menu()
     elif choice == "5":
         pass
     elif choice == "01":
@@ -97,11 +107,11 @@ def dev_Menu():
  |_|  |_|______|_| \_|\____/ 
 _______________________________
 {Fore.GREEN}Developer Menu For Custom Scripts{Fore.YELLOW}
-|1|--Get Object Id's
-|2|--List Communites
-|3|--Generate Transaction ID
-|4|--System Infomation
-|5|--Send Active Object
+|1|--Null
+|2|--Null
+|3|--Null
+|4|--Null
+|5|--Null
 {Fore.CYAN}|01|--MAIN MENU
 {Fore.RED}|00|--Exit {Fore.RESET}
     """
@@ -148,7 +158,7 @@ def dev_Menu():
  | |      | | |  \| | |  | |\ V / 
  | |      | | | . ` | |  | | > <  
  | |____ _| |_| |\  | |__| |/ . \ 
- |______|_____|_| \_|\____//_/ \_\
+ |______|_____|_| \_|\____//_/ \_\ 
    |  \/  |  ____| \ | | |  | |   
    | \  / | |__  |  \| | |  | |   
    | |\/| |  __| | . ` | |  | |   
@@ -208,22 +218,68 @@ def Cyber_Security_Menu():
                           | |\/| |  __| | . ` | |  | |                                            
                           | |  | | |____| |\  | |__| |                                            
                           |_|  |_|______|_| \_|\____/                                             
-{Fore.YELLOW}___________________________________________________________________________________________________
-{Fore.GREEN}{Fore.YELLOW}
-|1|--{Fore.RED}RED TEAM
-|2|--{Fore.BLUE}BLUE TEAM
-|3|--{Fore.GREY}MISC
-{Fore.CYAN}|01|--MAIN MENU
-{Fore.RED}|00|--Exit {Fore.RESET}
+{FY}__________________________________________________________________________________________________
+                                {FG}Welcome Player 1.
+{FR}|1|--RED TEAM
+{FB}|2|--BLUE TEAM
+{FGREY}|3|--MISC
+{FC}|01|--MAIN MENU
+{FY}|00|--Exit {Fore.RESET}
 """
     print(header_Cyber_Security)
     choice = input(Fore.WHITE + Style.BRIGHT + "/CYBER-SECURITY MENU:> ")
+    os.system('cls' if os.name == 'nt' else 'clear')
+    if choice == "1":
+        RED_TEAM_Menu()
+    elif choice == "2":
+        BLUE_TEAM_Menu()
+    elif choice == "3":
+        pass
+    elif choice == "01":
+        main_Menu()
+    elif choice == "00":
+        clearScr(), sys.exit()
+    elif choice == "":
+        print(Fore.RED + Style.BRIGHT +"Invalid Command...")
+        sleep(1)
+        Cyber_Security_Menu()
+    else:
+        print(Fore.RED + Style.BRIGHT +"Command Not Reccognised...")
+        sleep(1)
+        Cyber_Security_Menu()
+
+
+def RED_TEAM_Menu():
+    RED_TEAM_Header = f"""{Fore.RED}
+  _____  ______ _____    _______ ______          __  __ 
+ |  __ \|  ____|  __ \  |__   __|  ____|   /\   |  \/  |
+ | |__) | |__  | |  | |    | |  | |__     /  \  | \  / |
+ |  _  /|  __| | |  | |    | |  |  __|   / /\ \ | |\/| |
+ | | \ \| |____| |__| |    | |  | |____ / ____ \| |  | |
+ |_|  \_\______|_____/     |_|  |______/_/    \_\_|  |_|
+{Fore.BLUE}_________________________________________________________
+{Fore.GREEN}Welcome Player 1.{Fore.YELLOW}
+|1|--Hasher
+|2|--Gmail-Cracker
+|3|--SHA1 Cracker
+|4|--Fedora
+|5|--GNU/UNIX (Other)
+{Fore.CYAN}|01|--MAIN MENU
+{Fore.RED}|00|--Exit {Fore.RESET}
+
+    """
+    print(RED_TEAM_Header)
+    choice = input(Fore.WHITE + Style.BRIGHT + "/RED-TEAM MENU:> ")
     os.system('cls' if os.name == 'nt' else 'clear')
     if choice == "1":
         pass
     elif choice == "2":
         pass
     elif choice == "3":
+        pass
+    elif choice == "4":
+        pass
+    elif choice == "5":
         pass
     elif choice == "01":
         main_Menu()
@@ -236,11 +292,7 @@ def Cyber_Security_Menu():
     else:
         print(Fore.RED + Style.BRIGHT +"Command Not Reccognised...")
         sleep(1)
-        Cyber_Security_Menu()
-
-
-def RED_TEAM_Menu():
-    pass
+        dev_Menu()
 
 
 

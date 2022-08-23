@@ -98,10 +98,10 @@ def SHA1_Cracker():
     passList = str(urllib.request.urlopen('https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt').read(), 'UTF-8')
 
     else:
-        print("Defaulting to the Top 1K password list")
+        print("Defaulting to the Top 500 password list")
         time.sleep(2.5)
         #Top 1k
-        passList = str(urllib.request.urlopen('https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-1000.txt').read(), 'UTF-8')
+        passList = str(urllib.request.urlopen('https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/10-million-password-list-top-500.txt').read(), 'UTF-8')
 
     os.system('cls' if os.name == 'nt' else 'clear')
     print(Sha1_Cracker_LOGO)
