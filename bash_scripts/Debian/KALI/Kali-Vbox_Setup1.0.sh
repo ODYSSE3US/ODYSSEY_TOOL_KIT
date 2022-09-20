@@ -352,48 +352,47 @@ Download_Files () {
 
 Aliases () {
     cd ~
-    echo kali | sudo cp .bashrc .bashrc.backup
-    echo kali | sudo cp .zshrc .zshrc.backup
+    sudo cp .bashrc .bashrc.backup
+    sudo cp .zshrc .zshrc.backup
 
-    echo "\n\n#ODYSSEUS'S CUSTOM COMMANDS LIST\n" && sudo tee -a .zshrc
-    echo "#Improved Ease Of Use\n" && sudo tee -a .zshrc
+    echo "\n\n#ODYSSEUS'S CUSTOM COMMANDS LIST\n" >> .zshrc >> .bashrc
+    echo "#Improved Ease Of Use\n" >> .zshrc >> .bashrc
 
     #SYSTEM
-    echo "alias lt='ls --human-readable --size -1 -S --classify' #Improved File Visability & Layout" && sudo tee -a .zshrc
-    echo "alias upgrade='sudo apt-get update && sudo apt-get upgrade' #Update And Upgrade In One Command" && sudo tee -a .zshrc
-    echo "alias full-upgrade='sudo apt full-upgrade' #Full System Upgrade" && sudo tee -a .zshrc
-    echo "alias ports='netstat -tulanp' #Lists all open ports" && sudo tee -a .zshrc
-    echo "alias c='clear' #Shorterns The Clear Command" && sudo tee -a .zshrc
-    echo "alias cleardown='cd ~/Downloads && rm -r *' #Clears downloads folder" && sudo tee -a .zshrc
-    echo "alias cls='clear && ls' #Clears & Lists Files" && sudo tee -a .zshrc
-    #echo "alias shortName='Command_Here'" && sudo tee -a .zshrc
+    echo "alias lt='ls --human-readable --size -1 -S --classify' #Improved File Visability & Layout" >> .zshrc >> .bashrc
+    echo "alias upgrade='sudo apt-get update && sudo apt-get upgrade' #Update And Upgrade In One Command" >> .zshrc >> .bashrc
+    echo "alias full-upgrade='sudo apt full-upgrade' #Full System Upgrade" >> .zshrc >> .bashrc
+    echo "alias ports='netstat -tulanp' #Lists all open ports" >> .zshrc >> .bashrc
+    echo "alias c='clear' #Shorterns The Clear Command" >> .zshrc >> .bashrc
+    echo "alias cleardown='cd ~/Downloads && rm -r *' #Clears downloads folder" >> .zshrc >> .bashrc
+    #echo "alias shortName='Command_Here'" >> .zshrc >> .bashrc
 
     #PYTHON
-    echo "alias ve='python3 -m venv ./venv' #Creates A Python Virtual Environment In Current Dir" && sudo tee -a .zshrc
-    echo "alias va='source ./venv/bin/activate' #Activates The Python venv" && sudo tee -a .zshrc
-    echo "alias reqs='python3 -m pip install requirements.txt' #Installs Requirements.txt From Current Dir" && sudo tee -a .zshrc
-    #echo "alias shortName='Command_Here'" && sudo tee -a .zshrc
+    echo "alias ve='python3 -m venv ./venv' #Creates A Python Virtual Environment In Current Dir" >> .zshrc >> .bashrc
+    echo "alias va='source ./venv/bin/activate' #Activates The Python venv" >> .zshrc >> .bashrc
+    echo "alias reqs='python3 -m pip install requirements.txt' #Installs Requirements.txt From Current Dir" >> .zshrc >> .bashrc
+    #echo "alias shortName='Command_Here'" >> .zshrc >> .bashrc
 
     #OTHER (UNFINISHED)
-    echo "alias csec='cd ~/CyberSec'" && sudo tee -a .zshrc
-    echo "alias reps='cd ~/Reports'" && sudo tee -a .zshrc
-    echo "alias ghub='cd ~/Github'" && sudo tee -a .zshrc
-    echo "alias projects='cd ~/Projects'" && sudo tee -a .zshrc
-    echo "alias ody='toilet ODYSSEUS.. -f smblock -w 500 | lolcat'" && sudo tee -a .zshrc
-    echo "alias legend='toilet LIVING LEGEND.. -f smblock -w 500 | lolcat'" && sudo tee -a .zshrc
-    #echo "alias shortName='Command_Here'" && sudo tee -a .zshrc
+    echo "alias csec='cd ~/CyberSec'" >> .zshrc >> .bashrc
+    echo "alias reps='cd ~/Reports'" >> .zshrc >> .bashrc
+    echo "alias ghub='cd ~/Github'" >> .zshrc >> .bashrc
+    echo "alias projects='cd ~/Projects'" >> .zshrc >> .bashrc
+    echo "alias ody='toilet ODYSSEUS.. -f smblock -w 500 | lolcat'" >> .zshrc >> .bashrc
+    echo "alias legend='toilet LIVING LEGEND.. -f smblock -w 500 | lolcat'" >> .zshrc >> .bashrc
+    #echo "alias shortName='Command_Here'" >> .zshrc >> .bashrc
 
     #ADVANCED ALIASES (FUNCTIONS)
-    echo "\n\n #ADVANCED ALIASES (FUNCTIONS)\n" && sudo tee -a .zshrc
-    echo "#SHOWS PUBLIC IP WHICH ISNT SUPPORTED BY IPCONFIG" && sudo tee -a .zshrc
-    echo "pubip(){" && sudo tee -a .zshrc
-    echo "   pubip='$(dig +short myip.opendns.com @resolver1.opendns.com)'" && sudo tee -a .zshrc
-    echo "   echo 'My WAN/Public IP address: \${pubip}'\n}" && sudo tee -a .zshrc
-    echo "\n\n" && sudo tee -a .zshrc
-    echo "" && sudo tee -a .zshrc
+    echo "\n\n #ADVANCED ALIASES (FUNCTIONS)\n" >> .zshrc >> .bashrc
+    echo "#SHOWS PUBLIC IP WHICH ISNT SUPPORTED BY IPCONFIG" >> .zshrc >> .bashrc
+    echo "pubip(){" >> .zshrc >> .bashrc
+    echo "   pubip='$(dig +short myip.opendns.com @resolver1.opendns.com)'" >> .zshrc >> .bashrc
+    echo "   echo 'My WAN/Public IP address: \${pubip}'\n}" >> .zshrc >> .bashrc
+    echo "\n\n" >> .zshrc >> .bashrc
+    echo "" >> .zshrc >> .bashrc
 
 
-    echo "\n###### END OF ODY'S CUSTOM COMMANDS #####\n\n" && sudo tee -a .zshrc
+    echo "\n###### END OF ODY'S CUSTOM COMMANDS #####\n\n" >> .zshrc >> .bashrc
     
     cd ~
     #Updates The Local Profile Alias's
@@ -402,9 +401,9 @@ Aliases () {
     source ~/.zshrc
     
     #Updates The Systems Profile Alias's
-    #exec bash
-    #source ~/.bashrc
-    #exec zsh
+    exec bash
+    source ~/.bashrc
+    exec zsh
 }
 
 
@@ -480,7 +479,7 @@ Install_log () {
     echo "'upgrade'                 ---- Update And Upgrade In One Command"
     echo "'full-upgrade'            ---- Full System Upgrade"
     echo "'clear down'              ---- Cear The Downloads Folder"
-    echo "'cls'                     ---- Clears And Lists Files"
+#    echo "'Command'                 ---- TXT_Here"
 #    echo "'Command'                 ---- TXT_Here"
 
     echo "\n                 ##PYTHON ALIASES##"
@@ -602,11 +601,7 @@ TODO;
 fill the directories full of lists
 make bash alias's
 make all file names lower case
-make custom menu folder & Shortcuts
  "
-
-# Menu How To
-# https://wiki.xfce.org/howto/customize-menu
 
 # Refrences
 # https://newbedev.com/shopt-command-not-found-in-bashrc-after-shell-updation
